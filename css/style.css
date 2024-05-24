@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* common css start */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mon: "Montserrat", sans-serif;
+    --color1: #054C73;
+    --color2: #333333;
+    --color3: #666666;
+}
+
+/* common css end */
+
+  /* love part start */
+  #love{
+    width: 100%;
+    height: 100vh;
+    background: #ff0000;
+    display: flex;
+    align-items: center;
+}
+#love .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.love-div img{
+    width: 100px;
+    height: 100px;
+    animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@keyframes heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+    /* love part end */
+
+/* loading part start */
+#loading{
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+}
+#loading .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.loading-text {
+    font-weight: 700;
+    font-family: var(--mon);
+    font-size: 130px;
+    color :#0000;
+    overflow: hidden;
+    animation:  paning 5s infinite cubic-bezier(0.3,1,0,1);
+  } 
+  /* aita text shadow ta copy korechi online teke */
+  @keyframes paning {
+    0%  {text-shadow: 0    0 #000, 11ch 0 #8A9B0F, 22ch 0 #C02942, 33ch 0 #00A0B0,44ch 0 #000}
+    25% {text-shadow:-11ch 0 #000,  0ch 0 #8A9B0F, 11ch 0 #C02942, 22ch 0 #00A0B0,33ch 0 #000}
+    50% {text-shadow:-22ch 0 #000,-11ch 0 #8A9B0F,  0ch 0 #C02942, 11ch 0 #00A0B0,22ch 0 #000}
+    75% {text-shadow:-33ch 0 #000,-22ch 0 #8A9B0F,-11ch 0 #C02942,  0ch 0 #00A0B0,11ch 0 #000}
+    100%{text-shadow:-44ch 0 #000,-33ch 0 #8A9B0F,-22ch 0 #C02942,-11ch 0 #00A0B0, 0ch 0 #000}
+  }
+
+/* loading part end */
+/* round part start */
+#round{
+    width: 100%;
+    height: 100vh;
+    background: #070707;
+    display: flex;
+    align-items: center;
+}
+#round .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.round-text{
+    color: #ffffff;
+    font-family: var(--mon);
+    font-size: 30px;
+    font-weight: 700;
+}
+.round-div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border-top: 10px solid red;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    animation:round 1s infinite linear;
+  }
+  
+  @keyframes round{ 
+    100%{transform: rotate(360deg)}
+  }
+
+/* round part end */
+/* box part start */
+#box{
+    width: 100%;
+    height: 100vh;
+    background: #1B1A55;
+    display: flex;
+    align-items: center;
+}
+#box .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-div{
+    color: #ffffff;
+    font-family: var(--mon);
+    font-size: 50px;
+    font-weight: 600;
+    animation: box-ani 1s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@keyframes box-ani {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+
+  /* box part end */
+
+/* solar system start */
+#solar {
+    width: 100%;
+    height: 100vh;
+    background: #054C73;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+/* sun part start */
+.sun {
+    width: 100px;
+    height: 100px;
+    background: url(/assets/solar/sun.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mercury-path {
+    width: 150px;
+    height: 150px;
+}
+
+.mercury {
+    height: 20px;
+    width: 20px;
+    background: url(/assets/solar/mercury.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 44%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    animation: path-1 4s linear infinite;
+}
+
+@keyframes path-1 {
+    from {
+        transform: rotate(0deg) translateX(75px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    }
+}
+
+.mercury-path,
+.venus-path,
+.earth-path,
+.mars-path,
+.jupiter-path,
+.saturn-path,
+.uranus-path,
+.naptune-path {
+    border: 1px dotted #dd9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: transparent;
+}
+
+.venus-path {
+    height: 210px;
+    width: 210px;
+}
+
+.venus {
+    width: 29px;
+    height: 29px;
+    background: url(/assets/solar/venus.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    animation: path-2 8s linear infinite;
+}
+
+@keyframes path-2 {
+    from {
+        transform: rotate(0deg) translateX(105px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(105px) rotate(-360deg);
+    }
+}
+
+.earth-path {
+    height: 300px;
+    width: 300px;
+}
+
+.earth {
+    height: 34px;
+    width: 34px;
+    background: url(/assets/solar/earth.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 44%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    animation: path-3 12s linear infinite;
+}
+
+@keyframes path-3 {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+.mars-path {
+    height: 400px;
+    width: 400px;
+}
+
+.mars {
+    height: 23px;
+    width: 23px;
+    background: url(/assets/solar/mars.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    animation: path-4 11s linear infinite;
+}
+
+@keyframes path-4 {
+    from {
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+
+.jupiter-path {
+    height: 500px;
+    width: 500px;
+}
+
+.jupiter {
+    height: 48px;
+    width: 48px;
+    background: url(/assets/solar/jupiter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 46%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    animation: path-5 6s linear infinite;
+}
+
+@keyframes path-5 {
+    from {
+        transform: rotate(0deg) translateX(250px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+
+.saturn-path {
+    height: 630px;
+    width: 630px;
+}
+
+.saturn {
+    height: 43px;
+    width: 43px;
+    background: url(/assets/solar/saturn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    animation: path-6 12s linear infinite;
+}
+
+@keyframes path-6 {
+    from {
+        transform: rotate(0deg) translateX(315px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(315px) rotate(-360deg);
+    }
+}
+
+.uranus-path {
+    height: 750px;
+    width: 750px;
+}
+
+.uranus {
+    height: 40px;
+    width: 40px;
+    background: url(/assets/solar/uranus.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 47.5%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+    animation: path-7 14s linear infinite;
+}
+
+@keyframes path-7 {
+    from {
+        transform: rotate(0deg) translateX(375px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(375px) rotate(-360deg);
+    }
+}
+
+.naptune-path {
+    height: 850px;
+    width: 850px;
+}
+
+.naptune {
+    height: 38px;
+    width: 38px;
+    background: url(/assets/solar/neptune.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: path-8 17s linear infinite;
+}
+
+@keyframes path-8 {
+    from {
+        transform: rotate(0deg) translateX(421px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(421px) rotate(-360deg);
+    }
+}
+/* solar part end */
